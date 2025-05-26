@@ -1,0 +1,6 @@
+@NilveraApi_HostAddress = http://localhost:5182
+
+GET {{NilveraApi_HostAddress}}/
+Accept: application/json
+
+###
