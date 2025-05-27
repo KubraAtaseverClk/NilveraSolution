@@ -1,11 +1,9 @@
-﻿using Azure.Core;
-using Nilvera.Application.Features.Customers.CreateCustomer;
-using Nilvera.Application.Features.Customers.GetCustomer;
+﻿using Nilvera.Application.Features.Customers.CreateCustomer;
 using Nilvera.Application.Features.Customers.UpdateCustomer;
 using Nilvera.Application.Repository;
 using Nilvera.Domain.Entities;
 
-namespace Nilvera.Application.Service
+namespace Nilvera.Persistence.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {

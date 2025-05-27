@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Nilvera.Application.Features.Customers.ConvertJson;
+using Nilvera.Application.Features.Customers.ConvertXML;
 using Nilvera.Application.Features.Customers.CreateCustomer;
 using Nilvera.Application.Features.Customers.GetCustomer;
 using Nilvera.Application.Features.Customers.UpdateCustomer;
@@ -89,6 +90,17 @@ namespace NilveraApi.Controllers
         public async Task<ActionResult<Customer>> GetJSON()
         {
             return Ok(await mediator.Send(new ConvertJsonQuery()));
+        }
+
+        /// <summary>
+        /// convert customer list to xml
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetXML")]
+        public async Task<ActionResult<bool>> GetXML()
+        {
+            return Ok(await mediator.Send(new ConvertXMLQuery()));
         }
     }
 }

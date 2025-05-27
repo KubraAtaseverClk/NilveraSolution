@@ -7,6 +7,7 @@ namespace Nilvera.Application.Repository
     public class SqlDbBase
     {
         protected string Connstr;
+
         public SqlDbBase(string connectionstring)
         {
             this.Connstr = connectionstring;
@@ -14,7 +15,7 @@ namespace Nilvera.Application.Repository
 
         public T? Query<T>(string queryString, object parms)
         {
-            using (var conn = new SqlConnection(Connstr))
+            using (IDbConnection conn = new SqlConnection(Connstr))
             {
                 try
                 {

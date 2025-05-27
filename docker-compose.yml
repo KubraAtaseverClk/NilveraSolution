@@ -1,0 +1,14 @@
+services:
+  nilveraapi:
+    image: ${DOCKER_REGISTRY-}nilveraapi
+    build:
+      context: .
+      dockerfile: NilveraApi/Dockerfile
+    networks:
+        - nilvera_network
+networks:
+  nilvera_network:
+    external:
+        name: nilvera_network
+  
+  

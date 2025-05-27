@@ -1,6 +1,8 @@
-﻿namespace Nilvera.Domain.Entities
+﻿using Nilvera.Domain.Common;
+
+namespace Nilvera.Domain.Entities
 {
-    public class JsonValue
+    public class JsonValue :BaseEntity
     {
         public string? JsonString { get; set; }
     }
