@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: NilveraApi/Dockerfile
+    env_file: 
+        - .env
     networks:
         - nilvera_network
 networks:
@@ -11,4 +13,6 @@ networks:
     external:
         name: nilvera_network
   
+  
+
   

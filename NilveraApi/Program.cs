@@ -1,5 +1,4 @@
 using System.Reflection;
-using Microsoft.EntityFrameworkCore;
 using Nilvera.Application.Repository;
 using Nilvera.Persistence.Repository;
 
@@ -14,7 +13,8 @@ builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
 builder.Services.AddScoped<IXmlRepository, XmlRepository>();
 
 var assemblies = Assembly.Load("Nilvera.Application");
-var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+var conn = builder.Configuration["CONNECTION_STRING"];
+//var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 DBUtils.SetConnectionString(conn);
 
 builder.Services.AddMediatR(configuration =>

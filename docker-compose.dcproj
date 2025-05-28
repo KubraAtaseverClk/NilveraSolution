@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>1d866de2-df40-4d93-8c81-b2f275477ff6</ProjectGuid>
+    <ProjectGuid>a540c3a5-a7ef-4e25-a4e7-db406dbcd4a8</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>nilveraapi</DockerServiceName>

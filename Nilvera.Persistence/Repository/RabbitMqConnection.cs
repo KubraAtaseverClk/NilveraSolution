@@ -17,7 +17,7 @@ namespace Nilvera.Persistence.Repository
         {
             var factory = new ConnectionFactory
             {
-                HostName = "localhost",
+                HostName = "myrabbitmq"
             };
             _connection = await factory.CreateConnectionAsync();
         }

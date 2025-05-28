@@ -96,9 +96,9 @@ namespace NilveraApi.Controllers
         /// convert customer list to xml
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [Route("GetXML")]
-        public async Task<ActionResult<bool>> GetXML()
+        [HttpPost]
+        [Route("CustomerXML")]
+        public async Task<ActionResult<bool>> CustomerXML()
         {
             return Ok(await mediator.Send(new ConvertXMLQuery()));
         }
